@@ -62,21 +62,7 @@ class Backend extends CI_Controller
             "Datos insertados correctamente" : "Imposible registro de datos";
         echo json_encode($obj);
     }
-    public function get_all_images_ilus()
-    {
-        $data = $this->consultas_model->get_all_images_ilus();
-
-        if (!empty($data)) {
-            $response['status'] = 200;
-            $response['data'] = $data;
-            $response['msj'] = 'Se encontraron ilustraciones.';
-        } else {
-            $response['status'] = 400;
-            $response['msj'] = 'Imagenes no cargadas en la base de datos.';
-        }
-
-        echo json_encode($response);
-    }
+    
     //----------------------------------------------------------------
     public function get_informacion() 
     {
@@ -121,13 +107,13 @@ class Backend extends CI_Controller
         }
         echo json_encode($obj);
     }
-    public function carrga_img()
+    public function  carrga_img_conocenos()
     {
         $desc = $this->input->post("modal-desc");
         if ($this->upload->do_upload('modal-img')) {
             $data = $this->upload->data();
             $img_name = basename($data['file_name']); // Obtiene solo el nombre del archivo.
-            $this->consultas_model->carrga_img($img_name, $desc);
+            $this->consultas_model-> carrga_img_conocenos($img_name, $desc);
             $response['status'] = 200;
             $response['msj'] = 'Imagen cargada correctamente';
         } else {
@@ -136,14 +122,29 @@ class Backend extends CI_Controller
         }
         echo json_encode($response);
     }
-    public function eliminar_img()
+    public function  carrga_img_portafolio()
+    {
+        $desc = $this->input->post("modal-desc");
+        if ($this->upload->do_upload('modal-img')) {
+            $data = $this->upload->data();
+            $img_name = basename($data['file_name']); // Obtiene solo el nombre del archivo.
+            $this->consultas_model-> carrga_img_portafolio($img_name, $desc);
+            $response['status'] = 200;
+            $response['msj'] = 'Imagen Portafolio Cargada Correctamente';
+        } else {
+            $response['status'] = 400;
+            $response['msj'] = $this->upload->display_errors();
+        }
+        echo json_encode($response);
+    }
+    public function eliminar_img_conocenos()
     {
         $id = $this->input->post("id");
     
         // Obtén el nombre del archivo de la base de datos antes de eliminarlo.
         $imagen = $this->consultas_model->obtener_nombre_imagen($id);
     
-        $status = $this->consultas_model->eliminar_imagen($id);
+        $status = $this->consultas_model->eliminar_imagen_conocenos($id);
     
         if ($status == 200) {
             // Elimina el archivo del sistema de archivos si la eliminación de la base de datos fue exitosa.
@@ -164,9 +165,9 @@ class Backend extends CI_Controller
         }
         echo json_encode($response);
     }
-    public function get_all_images()
+    public function get_all_images_conocenos()
     {
-        $data = $this->consultas_model->get_all_images();
+        $data = $this->consultas_model->get_all_images_conocenos();
 
         if (!empty($data)) {
             $response['status'] = 200;
@@ -178,6 +179,46 @@ class Backend extends CI_Controller
 
         echo json_encode($response);
     }
+    public function get_all_images_portafolio()
+    {
+        $data = $this->consultas_model->get_all_images_portafolio();
 
+        if (!empty($data)) {
+            $response['status'] = 200;
+            $response['data'] = $data;
+        } else {
+            $response['status'] = 400;
+            $response['msj'] = 'No se encontraron imágenes.';
+        }
 
+        echo json_encode($response);
+    }
+    public function eliminar_img_portafolio()
+    {
+        $id = $this->input->post("id");
+    
+        // Obtén el nombre del archivo de la base de datos antes de eliminarlo.
+        $imagen = $this->consultas_model->obtener_nombre_imagen($id);
+    
+        $status = $this->consultas_model->eliminar_imagen_portafolio($id);
+    
+        if ($status == 200) {
+            // Elimina el archivo del sistema de archivos si la eliminación de la base de datos fue exitosa.
+            $file_path = './images/' . $imagen; // Ajusta la ruta a la ubicación real de tus imágenes.
+            if (file_exists($file_path) && is_file($file_path)) {
+                unlink($file_path);
+            } else {
+                // Maneja el caso en el que el archivo no existe.
+                $response['status'] = 400;
+                $response['msj'] = 'El archivo de imagen no existe.';
+            }
+    
+            $response['status'] = 200;
+            $response['msj'] = 'Imagen eliminada con éxito.';
+        } else {
+            $response['status'] = 400;
+            $response['msj'] = 'Error al eliminar la imagen.';
+        }
+        echo json_encode($response);
+    }
 }

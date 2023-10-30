@@ -12,7 +12,7 @@ class Backend extends CI_Controller
     {
         $data = array(
             "titulo" => "ZPWORKHOLDING",
-            "css"    => array("", "estilo"),
+            "css"    => array("estilo"),
             "js"     => array("index", "navbar")
 
         );
@@ -26,7 +26,7 @@ class Backend extends CI_Controller
     {
         $data = array(
             "titulo" => "Filosofia",
-            "css"    => array("", "estilo"),
+            "css"    => array("estilo"),
             "js"     => array("filosofia", "navbar")
         );
         $this->load->view("partes/header_page_view", $data);
@@ -53,7 +53,7 @@ class Backend extends CI_Controller
     {
         $data = array(
             "titulo" => "Servicios",
-            "css"    => array("", "estilo"),
+            "css"    => array( "estilo"),
             "js"     => array("servicios", "navbar")
 
         );
@@ -128,6 +128,20 @@ class Backend extends CI_Controller
         $this->load->view("admin/navbar_login");
         $this->load->view("admin/navbar");
         $this->load->view("admin/conocenos");
+        $this->load->view("admin/footer_page_view");
+    }
+    public function portafolio_admin($id_usuario, $token)
+    {
+        verifica_sesion($id_usuario, $token);
+        $data = array(
+            "titulo" => "WorkHolding-Admin",
+            "css"    => array("estilos"),
+            "js"     => array("admin/portafolio")
+        );
+        $this->load->view("admin/header_page_view", $data);
+        $this->load->view("admin/navbar_login");
+        $this->load->view("admin/navbar");
+        $this->load->view("admin/portafolio");
         $this->load->view("admin/footer_page_view");
     }
     public function  index_admin($id_usuario, $token)

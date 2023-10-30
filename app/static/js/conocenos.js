@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    get_all_images_ilus()
+    get_all_images_conocenos()
 	.then(function (response) {
 		//alerta("success", response.msj);
 		console.log(response);

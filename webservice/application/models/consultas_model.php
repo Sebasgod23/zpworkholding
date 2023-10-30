@@ -84,7 +84,7 @@ class consultas_model extends CI_Model
             ->get();
         return $rs->num_rows() > 0 ? $rs->result() : NULL;
     }
-    public function carrga_img($img_path, $desc)
+    public function carrga_img_conocenos($img_path, $desc)
     {
         $existing_img = $this->db
             ->get_where("zp_imagen", array("imagen" => $img_path))
@@ -96,21 +96,29 @@ class consultas_model extends CI_Model
             $this->db->insert("zp_imagen", array(
                 "imagen" => $img_path,
                 "descripcion" => $desc,
+                "accion" => "c1",
             ));
             return 1;
         }
     }
-    public function get_all_images()
+    public function carrga_img_portafolio($img_path, $desc)
     {
-        $query = $this->db->get("zp_imagen");
+        $existing_img = $this->db
+            ->get_where("zp_imagen", array("imagen" => $img_path))
+            ->row();
 
-        if ($query->num_rows() > 0) {
-            return $query->result();
+        if ($existing_img) {
+            return 0;
         } else {
-            return array();
+            $this->db->insert("zp_imagen", array(
+                "imagen" => $img_path,
+                "descripcion" => $desc,
+                "accion" => "p1",
+            ));
+            return 1;
         }
     }
-    public function eliminar_imagen($id)
+    public function eliminar_imagen_conocenos($id)
     {
         $this->db->where("id_imagen", $id);
         $this->db->delete("zp_imagen");
@@ -121,9 +129,10 @@ class consultas_model extends CI_Model
             return 400; // Error: No se pudo eliminar la imagen.
         }
     }
-    public function get_all_images_ilus()
+    public function get_all_images_conocenos()
     {
         $this->db->select('id_imagen, imagen, descripcion');
+        $this->db->where('accion','c1');
         $this->db->from('ZP_IMAGEN');
         $query = $this->db->get();
 
@@ -144,6 +153,30 @@ class consultas_model extends CI_Model
             return $row->imagen; // Reemplaza 'nombre_imagen' por el nombre real de la columna en tu tabla de imágenes.
         } else {
             return null; // Devuelve null si no se encuentra la imagen en la base de datos.
+        }
+    }
+    public function get_all_images_portafolio()
+    {
+        $this->db->select('id_imagen, imagen, descripcion');
+        $this->db->where('accion','p1');
+        $this->db->from('ZP_IMAGEN');
+        $query = $this->db->get();
+
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return array();
+        }
+    }
+    public function eliminar_imagen_portafolio($id)
+    {
+        $this->db->where("id_imagen", $id);
+        $this->db->delete("zp_imagen");
+
+        if ($this->db->affected_rows() > 0) {
+            return 200; // Éxito: Se eliminó la imagen.
+        } else {
+            return 400; // Error: No se pudo eliminar la imagen.
         }
     }
 }

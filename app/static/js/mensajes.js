@@ -82,10 +82,30 @@ function fecha_fancy(sFecha) {
 
 	return aFecha[2] + "-" + ames[aFecha[1] - 1] + "-" + aFecha[0];
 }
-function get_all_images_ilus() {
+function get_all_images_conocenos() {
 	return new Promise(function (resolve, reject) {
 		$.ajax({
-			url: appData.uri_ws + "backend/get_all_images_ilus",
+			url: appData.uri_ws + "backend/get_all_images_conocenos",
+			dataType: "json",
+			method: "POST",
+			success: function (response) {
+				if (response.status == 200) {
+					resolve(response);
+				}
+				if (response.status == 400) {
+					alerta("info", response.msj);
+				}
+			},
+			error: function () {
+				error_ajax();
+			},
+		});
+	});
+}
+function get_all_images_portafolio() {
+	return new Promise(function (resolve, reject) {
+		$.ajax({
+			url: appData.uri_ws + "backend/get_all_images_portafolio",
 			dataType: "json",
 			method: "POST",
 			success: function (response) {

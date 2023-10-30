@@ -12,6 +12,9 @@
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url() ?>backend/conocenos_admin/<?= $this->session->id_usuario ?>/<?= $this->session->token ?>">Conócenos</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?= base_url() ?>backend/portafolio_admin/<?= $this->session->id_usuario ?>/<?= $this->session->token ?>">portafolio</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Más

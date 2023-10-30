@@ -1,11 +1,11 @@
 $(document).ready(function () {
-	get_img_editar();
+	get_img_editar_portafolio();
 
 	//------------------------ ELIMINAR IMAGEN ----------------------------
 	$(document).on("click", "#eliminar_img", function (e) {
 		e.preventDefault();
 		$.ajax({
-			url: appData.uri_ws + "backend/eliminar_img_conocenos",
+			url: appData.uri_ws + "backend/eliminar_img_portafolio",
 			dataType: "json",
 			method: "POST",
 			data: {
@@ -26,38 +26,31 @@ $(document).ready(function () {
 		});
 	});
 
-    get_all_images_conocenos()
-	.then(function (response) {
-		//alerta("success", response.msj);
-		console.log(response);
-		var ilustracionesContainer = $("#img_ilustracion"); // Contenedor
+	get_all_images_portafolio()
+		.then(function (response) {
+			//alerta("success", response.msj);
+			console.log(response);
+			var ilustracionesContainer = $("#img_portafolio"); // Contenedor
+			for (var i = 0; i < response.data.length; i++) {
+				var ilustracion = response.data[i];
+				var cardHtml = '<div class="col-md-4 mb-4">';
+				cardHtml += '<div class="h-100">'; // Agregamos la clase h-100
+				cardHtml +=
+					'<img src="' +
+					appData.Urlimg +
+					"/" +
+					ilustracion.imagen +
+					'" alt="" class="card-img-top img-fluid" loading="lazy">'; // Agregamos las clases img-fluid
+				cardHtml += "</div>";
+				cardHtml += "</div>";
+				ilustracionesContainer.append(cardHtml);
+			}
+		})
+		.catch(function () {
+			console.log("Error al obtener las imágenes.");
+		});
 
-		for (var i = 0; i < response.data.length; i++) {
-			var ilustracion = response.data[i];
-			var cardHtml = '<div class="col-md-4 mb-4">';
-			cardHtml += '<div class="card text-bg-dark h-100">'; // Agregamos la clase h-100
-			cardHtml +=
-				'<img src="' +
-				appData.Urlimg +
-				"/" +
-				ilustracion.imagen +
-				'" alt="" class="card-img-top img-fluid" loading="lazy">'; // Agregamos las clases img-fluid
-			cardHtml += '<div class="card-img-overlay">';
-			cardHtml += "</div>";
-			cardHtml += '<div class="card-body text-center">';
-			cardHtml +=
-				'<h5 class="card-title text-white">' + ilustracion.descripcion + "</h5>";
-			cardHtml += "</div>";
-			cardHtml += "</div>";
-			cardHtml += "</div>";
-			ilustracionesContainer.append(cardHtml);
-		}
-	})
-	.catch(function () {
-		console.log("Error al obtener las imágenes.");
-	});
-
-	$(document).on("submit", "#form_carrga_img", function (e) {
+	$(document).on("submit", "#form_carrga_img_portafolio", function (e) {
 		e.preventDefault();
 		borra_mensajes();
 		if ($("#modal-img").val() == "") {
@@ -70,7 +63,7 @@ $(document).ready(function () {
 		}
 		var formData = new FormData(this);
 		$.ajax({
-			url: appData.uri_ws + "backend/carrga_img_conocenos",
+			url: appData.uri_ws + "backend/carrga_img_portafolio",
 			dataType: "json",
 			type: "post",
 			data: formData,
@@ -89,9 +82,9 @@ $(document).ready(function () {
 //----------------------------------------------------------------
 //----------------------------------------------------------------
 //----------------------------------------------------------------
-function get_img_editar() {
+function get_img_editar_portafolio() {
 	$.ajax({
-		url: appData.uri_ws + "backend/get_all_images_conocenos",
+		url: appData.uri_ws + "backend/get_all_images_portafolio",
 		dataType: "json",
 		method: "POST",
 		success: function (response) {
