@@ -1,0 +1,278 @@
+/* Estilos base para todos los tamaños de pantalla */
+.index {
+    background: url('../images/home.png') no-repeat;
+    background-size: cover;
+    padding-top: 0px;
+    padding-bottom: 100px;
+    min-height: 650px;
+}
+
+
+body {
+    color: #ffffff;
+    background: #303030;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+.contenedor_login {
+    background: url('../images/home.png') no-repeat;
+    background-size: cover;
+    padding-top: 0px;
+    padding-bottom: 100px;
+    min-height: 1000px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 100px;
+}
+
+.form-container {
+    color: black;
+    background-color: #fcfcfc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.388);
+    max-width: 300px;
+    width: 100%;
+    margin-right: 20px;
+    /* Espacio entre el formulario y el borde de la pantalla */
+}
+
+.form-title {
+    text-align: center;
+}
+.form-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.login-form{
+    text-align: center;
+}
+
+.form-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+#datos_usuarios {
+    color: black;
+}
+
+.navbar {
+    background-color: #aaa8a888;
+    position: static;
+    width: 100%;
+}
+.fixed-top-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que la barra de navegación esté por encima de otros elementos */
+}
+
+.fixed-top-navbar-second {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que la segunda barra de tareas esté por encima de otros elementos */
+    background-color: #fff; /* Opcional: cambia el color de fondo según tus preferencias */
+}
+
+
+.navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+/* Estilos específicos para tamaños de pantalla más pequeños (tabletas y teléfonos) */
+@media screen and (max-width: 768px) {
+    .contenedor {
+        padding: 20px;
+        /* Reducir el relleno del contenedor en pantallas más pequeñas */
+    }
+
+    .form-container {
+        max-width: 100%;
+        /* Aprovechar el ancho completo en pantallas más pequeñas */
+        margin: 0;
+        /* Eliminar el margen derecho en pantallas más pequeñas */
+    }
+
+    .form-input {
+        margin-bottom: 5px;
+        /* Reducir el margen inferior de los campos de entrada en pantallas más pequeñas */
+    }
+}
+/*********footer**********************/
+.footer {
+    /* Estilo para el pie de página */
+    background-color: rgb(34, 34, 34);
+    /* Fondo negro */
+    color: rgba(87, 85, 85, 0.971);
+    /* Texto blanco */
+    padding: 10px 0;
+    /* Espaciado interno superior e inferior */
+    text-align: center;
+    /* Centrar el texto en el pie de página */
+    position: fixed;
+    /* Establecer posición fija */
+    bottom: 0;
+    /* Fijar en la parte inferior de la ventana */
+    width: 100%;
+    /* Ancho del pie de página al 100% del viewport */
+    font-size: 20px;
+}
+/******************************************************************/
+/* Estilo para la sección "CONÓCENOS" */
+/* Estilo para la sección "CONÓCENOS" */
+.conocenos {
+    padding: 50px 0;
+}
+
+.conocenos h2 {
+    font-size: 32px;
+    color: #47C6F8;
+    text-align: center;
+}
+
+.conocenos p {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.card {
+    border: 1px solid #ddd;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 18px;
+    color: #333;
+}
+
+.col-md-4.mb-4 {
+    margin-bottom: 20px;
+}
+
+
+
+/* Estilo para la cuadrícula de imágenes horizontal */
+.image-grid {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente las imágenes */
+    align-items: center;
+    /* Centra verticalmente las imágenes */
+    gap: 20px;
+    /* Espaciado entre las imágenes */
+    overflow-x: auto;
+    /* Agrega desplazamiento horizontal si las imágenes no caben en la pantalla */
+    padding-bottom: 20px;
+    /* Espaciado inferior para evitar que las imágenes se superpongan en dispositivos pequeños */
+}
+
+/* Estilo para las tarjetas de imagen */
+.image-card {
+    flex: 0 0 auto;
+    max-width: 300px;
+    /* Ancho máximo de las tarjetas de imagen */
+    border: 1px solid #000000;
+    /* Borde con color */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    /* Oculta el contenido que desborda */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    text-align: center;
+    /* Alineación del texto en el centro */
+    margin: 0 auto;
+    /* Centra horizontalmente las tarjetas */
+}
+
+.image-card img {
+    max-width: 100%;
+    /* Ajusta el ancho de la imagen al 100% de la tarjeta */
+    height: auto;
+    /* Altura automática para mantener la proporción original */
+}
+
+/* Estilo para las tarjetas de imagen al pasar el cursor */
+.image-card:hover {
+    transform: scale(1.1);
+    /* Escala la tarjeta al 110% al pasar el cursor */
+    transition: transform 0.2s ease;
+    /* Efecto de transición suave */
+}
+
+/* Estilo responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .image-grid {
+        flex-direction: column;
+        /* Vuelve a la cuadrícula vertical en pantallas pequeñas */
+        align-items: flex-start;
+        /* Alinea las imágenes a la izquierda */
+        padding-bottom: 0;
+        /* Elimina el espaciado inferior */
+        overflow-x: hidden;
+        /* Elimina el desplazamiento horizontal */
+    }
+
+    .image-card {
+        max-width: 100%;
+        /* Ancho máximo del 100% en pantallas pequeñas */
+        margin: 0 auto;
+        /* Centra horizontalmente las tarjetas en pantallas pequeñas */
+    }
+}
+
+/*-------------- COLORES DE LAS ALERTAS -----------*/
+.custom-success {
+    background-color: #73d389;
+    color: #000000;
+    -webkit-text-stroke: .5px rgb(21, 114, 20); /* Para navegadores basados en WebKit (por ejemplo, Chrome, Safari) */
+}
+
+.custom-danger {
+    background-color: #d67781;
+    color: #000000;
+    -webkit-text-stroke: .5px rgb(122, 20, 20); /* Para navegadores basados en WebKit (por ejemplo, Chrome, Safari) */
+}
+.custom-info{
+    background-color: #d9e06e;
+    color: #000000;
+    -webkit-text-stroke: .5px rgb(108, 122, 20); /* Para navegadores basados en WebKit (por ejemplo, Chrome, Safari) */
+}
+
+.cont_agrega_img{
+    background-color: #5f5c5c35;
+    margin: 0;
+    cursor: pointer;
+}

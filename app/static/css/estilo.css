@@ -1,0 +1,857 @@
+body {
+    color: #ffffff;
+    background: #303030;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    /* prevent horizontal scrollbar from appearing */
+}
+
+.content {
+    /* Estilo para el contenido principal de tu página */
+    padding: 40px;
+}
+/* Cambia el color de los iconos a blanco */
+.services i {
+    color: #fff; /* Color blanco */
+}
+
+/* Estilos adicionales para el servicio */
+.service-box {
+    background-color: #333; /* Fondo oscuro */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-title {
+    color: #368fc2; /* Color blanco para el título */
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+/* Cambia el color de los iconos a azul (#007BFF) */
+.services i {
+    color: #ffffff;
+}
+
+.service-description {
+    color: #ccc; /* Color gris claro para la descripción */
+    font-size: 1rem;
+}
+
+
+
+.footer {
+    /* Estilo para el pie de página */
+    background-color: rgb(34, 34, 34);
+    /* Fondo negro */
+    color: rgba(87, 85, 85, 0.971);
+    /* Texto blanco */
+    padding: 10px 0;
+    /* Espaciado interno superior e inferior */
+    text-align: center;
+    /* Centrar el texto en el pie de página */
+    position: fixed;
+    /* Establecer posición fija */
+    bottom: 0;
+    /* Fijar en la parte inferior de la ventana */
+    width: 100%;
+    /* Ancho del pie de página al 100% del viewport */
+    font-size: 20px;
+
+}
+
+.a-nav-2 {
+    color: #6e6e6e;
+    text-decoration: none;
+}
+
+.a-nav-2:hover {
+    color: #47C6F8;
+}
+
+/* start h2 */
+h2 {
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 40px;
+}
+
+.custom-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    /* Espaciado interno */
+    background-color: #87cfeb00;
+    /* Color de fondo */
+    color: white;
+    /* Color del texto */
+    text-transform: none;
+    /* Convertir el texto a mayúsculas */
+    border: 2px solid #87CEEB;
+    /* Borde sólido */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    font-size: 16px;
+    /* Tamaño del texto */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    /* Transiciones suaves */
+    margin: 0 auto;
+    /* Centrar horizontalmente */
+    display: block;
+    /* Ajustar el ancho al contenido */
+}
+
+/* Efecto de hover para el botón */
+.custom-btn:hover {
+    background-color: #87CEEB;
+    /* Cambiar color de fondo en hover */
+    color: white;
+    /* Cambiar color del texto en hover */
+    transform: scale(1.05);
+    /* Escalar ligeramente en hover */
+    border-color: #87CEEB;
+    /* Cambiar color del borde en hover */
+}
+
+/* Estilos para el botón personalizado */
+.custom-btn {
+    /* ... (otros estilos) */
+    margin-top: 20px;
+    /* Ajusta la cantidad de espacio en la parte superior según tu preferencia */
+}
+
+.custom-btn-2 {
+    padding-left: 15rem;
+}
+
+.custom-btn {
+    text-decoration: none; 
+}
+
+
+/**************************************************************************/
+/*-----------------------------------BARA DE TAREAS 1----------------------------------*/
+/**************************************************************************/
+.custom-header {
+    font-size: 15px;
+    background-color: #333;
+    color: white;
+    padding-top: 8px;
+}
+
+.custom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.custom-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.custom-col-4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 15px;
+}
+
+.custom-col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+.custom-icon {
+    margin-right: 12px;
+}
+
+.custom-social-icon li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.custom-social-icon a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.custom-social-icon a:hover {
+    color: #00ccff;
+}
+
+.link-var1 {
+    color: #b5b5b5cc;
+    text-decoration: none;
+}
+
+.social-icon {
+    text-align: right;
+}
+
+.social-icon li a {
+    border: none;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    .custom-col-4 {
+        flex: 0 0 100%;
+        padding: 0;
+        font-size: 8px;
+        margin-bottom: 0px;
+        /* Añade un espacio entre las columnas en móviles */
+    }
+
+    .custom-icon {
+        margin-right: 0;
+        font-size: 8px;
+    }
+}
+
+/* Estilos para tablets y pantallas medianas */
+@media (min-width: 768px) and (max-width: 991px) {
+    .custom-col-4 {
+        flex: 0 0 50%;
+        font-size: 6px;
+        max-width: 50%;
+    }
+}
+
+/**************************************************************************/
+/* start home */
+
+.index {
+    background: url('../images/home.png') no-repeat;
+    background-size: cover;
+    padding-top: 2px;
+    padding-bottom: 100px;
+    min-height: 650px;
+}
+
+.index h1 {
+    font-weight: 300;
+    font-size: 70px;
+    padding-bottom: 10px;
+}
+
+.index h1 span {
+    color: #28a7e9;
+    font-weight: bold;
+}
+
+.index .btn {
+    background: transparent;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 180px;
+    height: 60px;
+    padding-top: 18px;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.index .btn:hover {
+    background: #28a7e9;
+    border-color: transparent;
+}
+
+.element {
+    height: 60px;
+    font-size: 16px;
+}
+
+/* end home */
+.nav-2 {
+    padding-right: 6rem;
+}
+
+/**************************************************************************/
+/*FORMULARIO LOGUIN*/
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f0f0f0;
+    padding: 100px;
+}
+
+.form-container {
+    color: black;
+    background-color: #fcfcfc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.388);
+    max-width: 300px;
+    width: 100%;
+    margin-right: 20px;
+    /* Espacio entre el formulario y el borde de la pantalla */
+}
+
+.form-title {
+    text-align: center;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.form-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-button:hover {
+    background-color: #0056b3;
+}
+
+#datos_usuarios {
+    color: black;
+}
+
+/*****************************************************************************/
+.map-container {
+    width: 100%;
+    height: 480px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    transition: opacity 0.3s ease-in-out;
+    /* Efecto de transición de opacidad */
+}
+
+/* Estilo para el iframe del mapa */
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+}
+
+/**************************************************************************/
+/**********************contactos********************************************/
+
+
+.contacto .form-control {
+    background: transparent;
+    border: 1px solid #28a7e9;
+    border-radius: 2px;
+    box-shadow: none;
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.contacto h2 {
+    font-size: 32px;
+    /* Tamaño de fuente del título */
+    color: #47C6F8;
+    /* Color del título  
+    /* Alineación del texto en el centro */
+}
+
+.contacto label {
+    font-weight: 500;
+}
+
+.contacto input {
+    height: 50px;
+}
+
+.contacto button[type="submit"] {
+    background: #28a7e9;
+    font-weight: bold;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.contacto button[type="submit"]:hover {
+    background: transparent; 
+}
+
+
+.contacto button {
+    display: inline-block;
+    padding: 10px 10px;
+    /* Espaciado interno */
+    background-color: #87CEEB;
+    /* Color de fondo */
+    color: #f1f0f0;
+    /* Color del texto */
+    text-transform: uppercase;
+    /* Convertir el texto a mayúsculas */
+    border: 2px solid #87CEEB;
+    /* Borde sólido */
+    border-radius: 50px;
+    /* Bordes redondeados */
+    font-size: 12px;
+    /* Tamaño del texto */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+    /* Transiciones suaves */
+    margin: 0 auto;
+    /* Centrar horizontalmente */
+    display: block;
+    /* Ajustar el ancho al contenido */
+}
+
+.contacto address {
+    border-bottom: 1px solid #505050;
+    padding-top: 30px;
+}
+
+.contacto address .address-title {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 10px;
+    color:#47C6F8;
+}
+
+.contacto address span {
+    display: block;
+    padding-bottom: 30px;
+}
+
+.contacto address .fa {
+    border: 1px solid #fff;
+    border-radius: 2px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/****************************************************************************/
+/***************************fin**********************************************/
+img {
+    vertical-align: middle;
+}
+
+@media (min-width: 950px) {
+
+    .col-md-1,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12 {
+        float: left;
+    }
+
+    .col-md-4 {
+        width: 33.33333333333333%;
+    }
+}
+
+/*************************************************/
+/* Estilos para la sección de contacto************/
+
+.contact-info {
+    background-color: #3b3b3c;
+    /* Fondo de la sección */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: justify;
+    /* Alineación del texto a la derecha */
+    color: #fafafa;
+    margin-left: 50px;
+
+    /* Color del texto */
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    /* Tamaño de fuente para los títulos */
+    color: #007bff;
+    /* Color para los títulos */
+    margin-bottom: 20px;
+    /* Espacio entre los títulos y el contenido */
+}
+
+.contact-info p {
+    font-size: 16px;
+    /* Tamaño de fuente para los párrafos */
+    margin: 0;
+    /* Elimina los márgenes predeterminados */
+    margin-bottom: 10px;
+    /* Espacio entre párrafos */
+}
+
+
+
+/*************************************filosofia**************************/
+/* Estilos para la sección de "Acerca de" */
+/* Estilos para la sección de "Acerca de" */
+/* Estilos para la sección "filosofia" */
+.filosofia {
+    width: 100%;
+    height: 100%;
+    background: #303030;/* Cambiado a un color de fondo (negro) */
+    padding: 50px 0; /* Espaciado interno superior e inferior */
+    text-align: center; /* Alineación del texto en el centro */
+    color: #34a6df; /* Color del texto (blanco) */
+}
+
+/* Estilos para el título principal */
+.filosofia h2 {
+    font-size: 32px; /* Tamaño de fuente del título */
+    color: #87CEEB; /* Color del título */
+    margin-bottom: 20px; /* Espaciado inferior del título */
+}
+
+/* Estilos para los párrafos */
+.filosofia p {
+    font-size: 20px; /* Tamaño de fuente de los párrafos */
+    color: #ffffff; /* Color del texto */
+}
+.filosofia .media-body ul {
+    text-align: center; /* Centra el texto de la lista */
+    padding: 0; /* Elimina el relleno predeterminado de la lista */
+}
+
+.filosofia .media-body ul h6 {
+    margin: 0; /* Elimina los márgenes en los elementos <h6> de la lista */
+    list-style: none; /* Elimina los puntos de la lista (viñetas) */
+}
+.filosofia i {
+    color: #ffffff; 
+    font-size: 2rem;/* Cambia "#FF0000" al color que prefieras para los iconos (en este caso, rojo) */
+}
+
+
+
+
+/* Otras reglas de estilo específicas que puedas necesitar */
+
+
+
+
+
+
+
+
+
+/* Estilos para las cajas de información (Misión, Visión, Valores, Políticas de calidad) */
+.media {
+    border: 2px solid #292929;
+    /* Borde con color */
+    padding: 20px;
+    /* Espaciado interno */
+    margin-bottom: 30px;
+    /* Espaciado inferior */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    background-color: rgba(69, 69, 69, 0.789);
+    /* Fondo blanco */
+}
+
+.media h3 {
+    font-size: 24px;
+    /* Tamaño de fuente del título */
+    color: #47C6F8;
+    /* Color del título */
+}
+
+.media p {
+    font-size: 16px;
+    /* Tamaño de fuente del párrafo */
+    color: #333;
+    /* Color del texto */
+}
+
+.media ul {
+    list-style: none;
+    /* Quitar viñetas de la lista */
+    padding: 0;
+}
+
+.media ul li {
+    margin-bottom: 5px;
+    /* Espaciado entre elementos de la lista */
+}
+
+/* Estilos para los iconos */
+.media-object i {
+    font-size: 36px;
+    /* Tamaño de fuente de los iconos */
+    color: #007bff;
+    /* Color de los iconos */
+}
+
+/******************************************************************/
+/* Estilo para la sección "CONÓCENOS" */
+/* Estilo para la sección "CONÓCENOS" */
+.conocenos {
+    padding: 50px 0;
+}
+
+.conocenos h2 {
+    font-size: 32px;
+    color: #47C6F8;
+    text-align: center;
+}
+
+.conocenos p {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.card {
+    border: 1px solid #ddd;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 18px;
+    color: #333;
+}
+
+.col-md-4.mb-4 {
+    margin-bottom: 20px;
+}
+
+
+
+/* Estilo para la cuadrícula de imágenes horizontal */
+.image-grid {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente las imágenes */
+    align-items: center;
+    /* Centra verticalmente las imágenes */
+    gap: 20px;
+    /* Espaciado entre las imágenes */
+    overflow-x: auto;
+    /* Agrega desplazamiento horizontal si las imágenes no caben en la pantalla */
+    padding-bottom: 20px;
+    /* Espaciado inferior para evitar que las imágenes se superpongan en dispositivos pequeños */
+}
+
+/* Estilo para las tarjetas de imagen */
+.image-card {
+    flex: 0 0 auto;
+    max-width: 300px;
+    /* Ancho máximo de las tarjetas de imagen */
+    border: 1px solid #000000;
+    /* Borde con color */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    /* Oculta el contenido que desborda */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    text-align: center;
+    /* Alineación del texto en el centro */
+    margin: 0 auto;
+    /* Centra horizontalmente las tarjetas */
+}
+
+.image-card img {
+    max-width: 100%;
+    /* Ajusta el ancho de la imagen al 100% de la tarjeta */
+    height: auto;
+    /* Altura automática para mantener la proporción original */
+}
+
+/* Estilo para las tarjetas de imagen al pasar el cursor */
+.image-card:hover {
+    transform: scale(1.1);
+    /* Escala la tarjeta al 110% al pasar el cursor */
+    transition: transform 0.2s ease;
+    /* Efecto de transición suave */
+}
+
+/* Estilo responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .image-grid {
+        flex-direction: column;
+        /* Vuelve a la cuadrícula vertical en pantallas pequeñas */
+        align-items: flex-start;
+        /* Alinea las imágenes a la izquierda */
+        padding-bottom: 0;
+        /* Elimina el espaciado inferior */
+        overflow-x: hidden;
+        /* Elimina el desplazamiento horizontal */
+    }
+
+    .image-card {
+        max-width: 100%;
+        /* Ancho máximo del 100% en pantallas pequeñas */
+        margin: 0 auto;
+        /* Centra horizontalmente las tarjetas en pantallas pequeñas */
+    }
+}
+
+/*******************************end conocenos***************************/
+/*********************************servicios***************************/
+/* Estilo para la sección de "Nuestros Servicios" */
+/* Estilo para la sección de "Nuestros Servicios" */
+
+
+/* Resto del CSS igual que antes */
+
+
+.card-title{
+    color: black;
+}
+
+/* Resto del CSS igual que antes */
+
+
+.service  {
+    font-size: 35px;
+    /* Tamaño de fuente del título */
+    color: #47C6F8;
+    /* Color del título */
+    margin-bottom: 30px;
+    /* Espaciado inferior del título */
+}
+
+/* Estilo para las cajas de servicio */
+.service-box {
+    text-align: center;
+    padding: 30px;
+    background-color: #1e1d1d0e;
+    /* Fondo blanco */
+    border: 1px solid #03030307;
+    /* Borde con color */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    margin-bottom: 30px;
+    /* Espaciado inferior entre cajas */
+}
+
+.service-box i {
+    font-size: 5rem;
+    /* Tamaño de fuente del ícono */
+    color: #eff0f1;
+    /* Color del ícono */
+    margin-bottom: 20px;
+    /* Espaciado inferior del ícono */
+}
+
+.service-title {
+    font-size: 20px;
+    /* Tamaño de fuente del título del servicio */
+  color: #47C6F8;
+    /* Color del título del servicio */
+    margin-bottom: 10px;
+    /* Espaciado inferior del título */
+}
+
+
+ 
+
+
+.service-description {
+    font-size: 16px;
+    /* Tamaño de fuente de la descripción del servicio */
+    color: #f9f9f9;
+    /* Color del texto de descripción del servicio */
+}
+.wow span {
+    color: #47C6F8; /* Color del título principal */
+}
+
+
+/* Estilo responsive para dispositivos pequeños */
+@media (max-width: 767px) {
+    .service-box {
+        padding: 20px;
+        /* Reducir el espacio interno en dispositivos pequeños */
+    }
+
+    .service-box i {
+        font-size: 2rem;
+        /* Reducir el tamaño del ícono en dispositivos pequeños */
+    }
+}
+
+/*********************************/
+/************portafolio***********/
+/* Estilos para la sección de Portafolio */
+/* Estilos para la sección del portafolio */
+/* Estilo para las imágenes al pasar el cursor sobre ellas */
+.portfolio-item:hover .img-fluid {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+.portfolio h2 {
+    color: #368fc2; /* Cambia "#ff0000" al color que prefieras para el título */
+}
+
+/* Estilo para el texto "Ver imagen" al pasar el cursor sobre las imágenes */
+.portfolio-item .overlay .text {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.portfolio-item:hover .overlay .text {
+    opacity: 1;
+}
+
+/* Estilo para el encabezado "PORTAFOLIO" */
+.portfolio h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Estilo para el contenedor de imágenes */
+.portfolio .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#img_ilustracion{
+    color: white;
+}
