@@ -6,25 +6,22 @@
                      <h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>CONÓCENOS - ADMIN</span></h2>
                      <p align="center">En ZERO POINT WORK HOLDING contamos con un equipo de trabajo capacitado para cubrir las necesidades de nuestros clientes.</p>
                  </div>
-                 <div class="col-md-2 mb-4 mt-5">
+                  <div class="col-md-55">
                      <div class="card text-center">
-                         <button style="width: 40px;" data-bs-toggle="modal" data-bs-target="#modal_img" class="btn btn-warning btn-block"><i class="bi bi-pencil-square"></i></button>
+                         <button style="width: 40px mt-2;" data-bs-toggle="modal" data-bs-target="#modal_img" class="btn btn-warning btn-block"><i class="bi bi-pencil-square"></i></button>
                          <div class="card-header">
-                             Carrga Imagen
+                             Carga Imagen Conócenos
                          </div>
                          <div class="card-body cont_agrega_img" data-bs-toggle="modal" data-bs-target="#agrega_img_conocenos">
                              <i class="bi bi-plus-lg fa-2x"></i>
                          </div>
                      </div>
                  </div>
-                 <div class="row justify-content-center" id="img_ilustracion">
-
+                 <div class="row justify-content-center mt-4" id="img_ilustracion">
                  </div>
-             </div
-         </div><!--/row-->
+             </div></div><!--/row-->
      </section><!--/conocenos-->
  </div><!--/container-->
-
  <div class="modal fade " id="modal_img" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
      <div class="modal-dialog  modal-xl">
          <div class="modal-content">
@@ -47,7 +44,7 @@
      <div class="modal-dialog">
          <div class="modal-content">
              <div class="modal-header ">
-                 <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Agregar imagen-conocenos</h1>
+                 <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Agregar imagen-conócenos</h1>
                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
              </div>
              <div class="modal-body">
@@ -71,3 +68,10 @@
          </div>
      </div>
  </div>
+
+
+
+
+
+
+ 

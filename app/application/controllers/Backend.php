@@ -104,7 +104,7 @@ class Backend extends CI_Controller
         $this->load->view("partes/footer_page_view");
     }
     //------------------------ADMINISTRADOR----------------------------------------
-    public function login_admin()
+    public function admin_1f96df72a9c90fc634f8c48ba7502815()
     {
         $data = array(
             "titulo" => "WorkHolding-Admin",
